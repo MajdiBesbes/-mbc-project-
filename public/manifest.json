@@ -1,0 +1,46 @@
+{
+  "name": "MBC High Value Business Consulting",
+  "short_name": "MBC Consulting",
+  "description": "Cabinet d'expertise comptable à Meaux spécialisé dans l'accompagnement des entrepreneurs franco-maghrébins",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0055A4",
+  "icons": [
+    {
+      "src": "/images/logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logo-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Simulateurs",
+      "url": "/simulators",
+      "description": "Accéder aux simulateurs financiers"
+    },
+    {
+      "name": "Devis",
+      "url": "/devis",
+      "description": "Obtenir un devis personnalisé"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact",
+      "description": "Contacter un expert-comptable"
+    }
+  ]
+}
