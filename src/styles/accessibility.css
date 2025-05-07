@@ -1,0 +1,129 @@
+/* Contraste élevé */
+[data-high-contrast="true"] {
+  --primary-color: #0000ff;
+  --secondary-color: #000000;
+  --text-color: #000000;
+  --background-color: #ffffff;
+  --border-color: #000000;
+}
+
+[data-high-contrast="true"] * {
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+/* Réduction des mouvements */
+[data-reduced-motion="true"] * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Support des lecteurs d'écran */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Support des raccourcis clavier */
+[data-shortcut] {
+  position: relative;
+}
+
+[data-shortcut]::after {
+  content: attr(data-shortcut);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--dark-color);
+  color: white;
+  padding: 2px 6px;
+  border-radius: var(--border-radius);
+  font-size: 0.75rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+[data-shortcut]:focus::after {
+  opacity: 1;
+}
+
+/* Support des descriptions */
+[aria-describedby] {
+  position: relative;
+}
+
+[aria-describedby]:hover::before {
+  content: attr(aria-describedby);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--dark-color);
+  color: white;
+  padding: 8px;
+  border-radius: var(--border-radius);
+  font-size: 0.875rem;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+/* Support des états */
+[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+[aria-hidden="true"] {
+  display: none;
+}
+
+/* Support des rôles */
+[role="button"] {
+  cursor: pointer;
+}
+
+[role="alert"] {
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid var(--error-color);
+  border-radius: var(--border-radius);
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+[role="status"] {
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid var(--info-color);
+  border-radius: var(--border-radius);
+  background-color: rgba(23, 162, 184, 0.1);
+} 

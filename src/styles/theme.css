@@ -1,0 +1,68 @@
+:root[data-theme="light"] {
+  /* Couleurs principales */
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --error-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+
+  /* Couleurs de fond */
+  --background-color: #ffffff;
+  --background-alt-color: #f8f9fa;
+  --background-hover-color: #e9ecef;
+
+  /* Couleurs de texte */
+  --text-color: #212529;
+  --text-muted-color: #6c757d;
+  --text-light-color: #ffffff;
+
+  /* Bordures et ombres */
+  --border-color: #dee2e6;
+  --border-radius: 0.25rem;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  /* Transitions */
+  --transition-base: all 0.3s ease;
+  --transition-fast: all 0.15s ease;
+  --transition-slow: all 0.5s ease;
+}
+
+:root[data-theme="dark"] {
+  /* Couleurs principales */
+  --primary-color: #0d6efd;
+  --secondary-color: #adb5bd;
+  --success-color: #198754;
+  --error-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #0dcaf0;
+
+  /* Couleurs de fond */
+  --background-color: #212529;
+  --background-alt-color: #2c3034;
+  --background-hover-color: #343a40;
+
+  /* Couleurs de texte */
+  --text-color: #f8f9fa;
+  --text-muted-color: #adb5bd;
+  --text-light-color: #ffffff;
+
+  /* Bordures et ombres */
+  --border-color: #495057;
+  --border-radius: 0.25rem;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
+
+  /* Transitions */
+  --transition-base: all 0.3s ease;
+  --transition-fast: all 0.15s ease;
+  --transition-slow: all 0.5s ease;
+}
+
+/* Animation de transition entre les thèmes */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+} 

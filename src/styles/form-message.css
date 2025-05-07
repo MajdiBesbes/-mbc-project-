@@ -1,0 +1,87 @@
+.form-message {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  margin: 0.5rem 0;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  animation: formFadeIn 0.3s ease-out;
+}
+
+.form-message-icon {
+  margin-right: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.form-message-text {
+  flex: 1;
+}
+
+/* Styles pour les différents types de messages */
+.form-message-success {
+  background-color: var(--success-light);
+  color: var(--success-dark);
+  border: 1px solid var(--success);
+}
+
+.form-message-icon-success {
+  color: var(--success);
+}
+
+.form-message-error {
+  background-color: var(--error-light);
+  color: var(--error-dark);
+  border: 1px solid var(--error);
+}
+
+.form-message-icon-error {
+  color: var(--error);
+}
+
+.form-message-info {
+  background-color: var(--info-light);
+  color: var(--info-dark);
+  border: 1px solid var(--info);
+}
+
+.form-message-icon-info {
+  color: var(--info);
+}
+
+/* Animations */
+@keyframes formFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Styles responsifs */
+@media (max-width: 768px) {
+  .form-message {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8125rem;
+  }
+
+  .form-message-icon {
+    font-size: 1.125rem;
+  }
+}
+
+/* Styles pour l'impression */
+@media print {
+  .form-message {
+    border: 1px solid #000;
+    background-color: transparent;
+    color: #000;
+  }
+
+  .form-message-icon {
+    display: none;
+  }
+} 

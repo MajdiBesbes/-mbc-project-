@@ -25,14 +25,28 @@
     <meta name="twitter:image" content="/logo.png" />
 
     <link rel="canonical" href="https://mbc-consulting.fr/" />
+    
+    <!-- Préchargement des ressources critiques -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    
+    <!-- Préchargement des images critiques -->
+    <link rel="preload" as="image" href="/logo.png" />
+    
     <title>MBC High Value Business Consulting - Expert-Comptable à Meaux</title>
   </head>
   <body>
+    <img src="/images/logo MBC.png" alt="Logo MBC High Value Business Consulting" style="max-width: 300px; height: auto; display: block; margin: 30px auto 10px auto;" />
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <noscript>
+      <p>Veuillez activer JavaScript pour utiliser ce site web.</p>
+    </noscript>
   </body>
-</html>
+</html> 

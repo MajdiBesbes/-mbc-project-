@@ -1,30 +1,31 @@
 import React from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
-import { useAuth } from '../contexts/AuthContext';
-import LoadingSpinner from './LoadingSpinner';
+import Loader from './Loader';
 
 interface ProtectedRouteProps {
   children: React.ReactNode;
-  requireAdmin?: boolean;
+  isAuthenticated: boolean;
+  isLoading?: boolean;
+  redirectPath?: string;
 }
 
-const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children, requireAdmin = false }) => {
-  const { user, loading, isAdmin } = useAuth();
+const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
+  children,
+  isAuthenticated,
+  isLoading = false,
+  redirectPath = '/login'
+}) => {
   const location = useLocation();
 
-  if (loading) {
-    return <LoadingSpinner />;
+  if (isLoading) {
+    return <Loader size="large" className="loader-fullscreen" />;
   }
 
-  if (!user) {
-    return <Navigate to="/login" state={{ from: location }} replace />;
-  }
-
-  if (requireAdmin && !isAdmin) {
-    return <Navigate to="/unauthorized" replace />;
+  if (!isAuthenticated) {
+    return <Navigate to={redirectPath} state={{ from: location }} replace />;
   }
 
   return <>{children}</>;
 };
 
-export default ProtectedRoute;
+export default React.memo(ProtectedRoute); 

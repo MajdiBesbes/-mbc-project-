@@ -1,9 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /expert-access
-Disallow: /espace-client
-Disallow: /login
-Disallow: /reset-password
-Disallow: /auth/callback
+Disallow: /zone-expert/
 
-Sitemap: https://mbc-consulting.fr/sitemap.xml
+Sitemap: https://mbc-consulting.fr/sitemap.xml 
